@@ -1,4 +1,4 @@
-FROM babim/oraclelinuxbase:7
+FROM babim/centosbase:7-x86
 ENV SOFT	AppManager
 ENV EDITTION	essential
 ENV SOFT_HOME	/opt/ManageEngine/${SOFT}
