@@ -1,6 +1,6 @@
 FROM babim/centosbase:7-x86
 ENV SOFT	AppManager
-ENV EDITTION	essential
+ENV EDITTION	enterprise
 ENV SOFT_HOME	/opt/ManageEngine/${SOFT}
 
 # install depend
