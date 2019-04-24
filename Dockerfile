@@ -2,9 +2,12 @@ FROM babim/centosbase:7-x86
 ENV SOFT	AppManager
 ENV EDITTION	enterprise
 ENV SOFT_HOME	/opt/ManageEngine/${SOFT}
+ENV MACHINE_TYPE x86
 
-# install depend
-RUN yum install curl -y && curl -Ls https://raw.githubusercontent.com/babim/docker-tag-options/master/z%20SCRIPT%20AUTO/option.sh -o /option.sh
+# download option
+RUN yum install curl -y && \
+    curl -Ls https://raw.githubusercontent.com/babim/docker-tag-options/master/z%20SCRIPT%20AUTO/option.sh -o /option.sh && \
+    chmod +x /option.sh
 
 # install
 RUN curl -s https://raw.githubusercontent.com/babim/docker-tag-options/master/z%20ManageEngine/${SOFT}_install.sh | bash
