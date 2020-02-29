@@ -3,6 +3,7 @@ ENV SOFT	AppManager
 ENV EDITTION	essential
 ENV SOFT_HOME	/opt/ManageEngine/${SOFT}
 ENV MACHINE_TYPE x86
+ENV MANUAL true
 
 # download option
 RUN yum install curl -y && \
@@ -19,4 +20,5 @@ VOLUME ["${SOFT_HOME}"]
 # Expose default HTTP connector port.
 EXPOSE 9090 8443
 
+CMD ["/usr/sbin/init"]
 ENTRYPOINT ["/docker-entrypoint.sh"]
