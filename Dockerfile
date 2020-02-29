@@ -2,7 +2,7 @@ FROM babim/oraclelinuxbase:7
 ENV SOFT	AppManager
 ENV EDITTION	essential
 ENV SOFT_HOME	/opt/ManageEngine/${SOFT}
-
+ENV MANUAL	true
 # download option
 RUN yum install curl -y && \
     curl -Ls https://raw.githubusercontent.com/babim/docker-tag-options/master/z%20SCRIPT%20AUTO/option.sh -o /option.sh && \
@@ -18,4 +18,5 @@ VOLUME ["${SOFT_HOME}"]
 # Expose default HTTP connector port.
 EXPOSE 9090 8443
 
+CMD ["/usr/sbin/init"]
 ENTRYPOINT ["/docker-entrypoint.sh"]
