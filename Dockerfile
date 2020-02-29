@@ -19,4 +19,4 @@ VOLUME ["${SOFT_HOME}"]
 EXPOSE 9090 8443
 
 CMD ["/usr/sbin/init"]
-ENTRYPOINT ["/docker-entrypoint.sh"]
+#ENTRYPOINT ["/docker-entrypoint.sh"]
