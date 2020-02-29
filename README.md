@@ -6,7 +6,7 @@ docker run --detach --publish 9090:9090 babim/am:latest
 ```
 ```
 volume:
-/opt/ManageEngine/AppManager
+/opt/ManageEngine
 port:
 9090 8443
 ```
