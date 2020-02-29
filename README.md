@@ -10,3 +10,6 @@ volume:
 port:
 9090 8443
 ```
+
+run manual with CMD /usr/sbin/init and download, install apps
+change to CMD default after install apps
